@@ -33,6 +33,8 @@ public class CellphoneServiceModified {
         String owner1 = scanner.nextLine();
         cellPhone1.setOwner(owner1);
 
+        System.out.println("\n");
+
         //cellphone 2
         System.out.print("What is the serial number? ");
         int serialNumber2 = scanner.nextInt();  // Read integer value
@@ -66,13 +68,17 @@ public class CellphoneServiceModified {
         System.out.println("Phone Number: " + cellPhone1.getPhoneNumber());
         System.out.println("Owner: " + cellPhone1.getOwner());*/
 
+        // display info for phone 1 and 2
         display(cellPhone1);
         display(cellPhone2);
         System.out.println("\n");
+        //display phones calling each other
         cellPhone1.dial(cellPhone2.getPhoneNumber());
         cellPhone2.dial(cellPhone1.getPhoneNumber());
 
     }
+
+
 
     public static void display(CellPhone phone){
         System.out.println("\nCellPhone Details:");
